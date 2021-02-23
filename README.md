@@ -1,4 +1,4 @@
-# app-jsdelivr
+# find-npm-packages
 
 ## Project setup
 ```
