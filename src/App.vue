@@ -5,26 +5,19 @@
         <Table />
       </v-container>
     </v-main>
-    <v-footer app>
-      <h1>footer there</h1>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-// import AppBar from './components/AppBar.vue'
-import Table from './components/Table.vue'
+  import Table from './components/Table.vue'
+  import Footer from './components/Footer.vue'
 
-export default {
-  name: 'App',
-
-  components: {
-    // AppBar,
-    Table
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  export default {
+    name: 'App',
+    components: {
+      Table,
+      Footer,
+    }
+  }
 </script>

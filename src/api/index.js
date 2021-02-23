@@ -1,8 +1,17 @@
-const link = 'https://data.jsdelivr.com/v1/stats/packages/year'
+import axios from 'axios'
+
+const instance = axios.create({
+  baseURL: 'https://registry.npmjs.org/-/v1/search?size=250&text=',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8',
+  },
+})
+
 export default {
-  getPackages() {
-    return fetch(link)
-      .then((res) => res.json())
-      .then((data) => data)
+  getPackages(name) {
+    return instance
+      .get(name)
+      .then((res) => res.data)
+      .catch((err) => err)
   }
-}
+};
